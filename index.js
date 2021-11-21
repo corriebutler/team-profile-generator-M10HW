@@ -62,7 +62,6 @@ function addManager () {
         let manager = new Manager( name, id, email, officeNumber);
         // Add manager to the team array (teamMembers)
         teamMembers.push(manager);
-        console.log(manager);
         // Call Main Menu - only one manager per team so it's outside the main menu flow
         mainMenu();
     })
@@ -121,7 +120,7 @@ function addIntern() {
         },
         {
             type: 'input',
-            name: 'gitHub',
+            name: 'school',
             message: 'What school is the intern from?',
         },
     ])
@@ -137,7 +136,7 @@ function addIntern() {
 };
 
 function buildTeam() {
-
+    console.log(teamMembers);
 };
 
 addManager();
