@@ -4,6 +4,7 @@ const path = require('path');
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
+const generateHTML = require('./utils/generateHTML.js');
 
 const teamMembers = [];
 
@@ -135,8 +136,21 @@ function addIntern() {
     })
 };
 
+function writeToFile(fileName, data) {
+    // Generate the HTML file
+    fs.writeFileSync(fileName, data)
+};
+
 function buildTeam() {
+
     console.log(teamMembers);
+    writeToFile('./dist/team-profiles.html', generateHTML(teamMembers), err => {
+        if (err) {
+            console.log(err);;
+        }
+        console.log(`Your new team profile has been generated! Check the team-profiles.html file in the dist folder to see the file you created!`);
+    });
+
 };
 
 addManager();
