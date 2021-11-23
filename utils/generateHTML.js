@@ -84,8 +84,8 @@ module.exports = teamMembers => {
                 </h1>
             </div>
         </header>
-        <div class="container card-deck d-flex justify-content-between">
-            <div class="card-deck d-flex">
+        <div class="container card-deck d-flex flex-wrap justify-content-between">
+            <div class="card-deck d-flex flex-wrap">
                 ${generateTeam(teamMembers)}
             </div>
         </div>
