@@ -9,7 +9,7 @@ function generateManager(manager) {
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Employee ID Number: ${manager.getId()} </li>
-                <li class="list-group-item">Email Address: ${manager.getEmail()} </li>
+                <li class="list-group-item">Email Address: <a href="mailto:${manager.getEmail()}">${manager.getEmail()} </a></li>
                 <li class="list-group-item">Office Number: ${manager.getOfficeNumber()} </li>
             </ul>
         </div>
@@ -25,7 +25,7 @@ function generateIntern(intern) {
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Employee ID Number: ${intern.getId()} </li>
-            <li class="list-group-item">Email Address: ${intern.getEmail()} </li>
+            <li class="list-group-item">Email Address: <a href="mailto:${intern.getEmail()}">${intern.getEmail()} </a></li>
             <li class="list-group-item">School: ${intern.getSchool()}</li>
         </ul>
     </div>
@@ -41,7 +41,7 @@ function generateEngineer(engineer) {
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">Employee ID Number: ${engineer.getId()} </li>
-        <li class="list-group-item">Email Address: ${engineer.getEmail()}</li>
+        <li class="list-group-item">Email Address: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
         <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
     </ul>
 </div>`

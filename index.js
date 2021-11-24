@@ -139,11 +139,10 @@ function addIntern() {
 function writeToFile(fileName, data) {
     // Generate the HTML file
     fs.writeFileSync(fileName, data)
+    console.log(`Your new team profile has been generated! Check the team-profiles.html file in the dist folder to see the file you created!`);
 };
 
 function buildTeam() {
-
-    console.log(teamMembers);
     writeToFile('./dist/team-profiles.html', generateHTML(teamMembers), err => {
         if (err) {
             console.log(err);;
